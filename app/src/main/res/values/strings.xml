@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Crib Task</string>
+    <string name="mobile_number">Enter the Mobile Number</string>
+    <string name="day">Enter the Number of days</string>
+    <string name="submit">Submit</string>
+    <string name="error_empty_number">Please enter Mobile Number</string>
+    <string name="error_invalid_number">Please enter valid Mobile Number</string>
+    <string name="error_empty_day">Please enter number of Days</string>
+    <string name="error_invalid_day">Please enter day greater then zero</string>
+    <string name="no_sms_found">Sorry, no messages found</string>
+    <string name="sms_found">number of messages found</string>
+    <string name="permission_error">SMS Permission  Denied</string>
+</resources>
