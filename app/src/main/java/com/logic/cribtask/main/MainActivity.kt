@@ -13,7 +13,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import com.logic.cribtask.R
 import com.logic.cribtask.databinding.ActivityMainBinding
-import com.logic.cribtask.utils.hideKeyboard
+import com.logic.cribtask.utils.setupUI
 import com.logic.cribtask.utils.showLongToast
 import com.logic.cribtask.utils.showToast
 import java.util.*
@@ -31,6 +31,9 @@ class MainActivity : AppCompatActivity(), MainPresenter.View {
         setContentView(binding.root)
         // Initialize the Presenter
         mainPresenterImpl = MainPresenterImpl(this, this)
+
+        // Hide  Keyboard on click outside of editText
+        setupUI(binding.root,this)
 
         requestPermissionLauncher =
             registerForActivityResult(ActivityResultContracts.RequestPermission()) { granted ->
@@ -63,7 +66,6 @@ class MainActivity : AppCompatActivity(), MainPresenter.View {
         })
 
         binding.btnSubmit.setOnClickListener {
-            hideKeyboard(this)
             checkPermissionAndGetSMS()
         }
 

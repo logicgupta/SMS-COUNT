@@ -9,16 +9,11 @@ import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.Toast
-import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
 
 
 fun Context.showToast(text: CharSequence) {
     Toast.makeText(this, text, Toast.LENGTH_SHORT).show()
-}
-
-fun Context.showToast(@StringRes resId: Int) {
-    Toast.makeText(this, resId, Toast.LENGTH_SHORT).show()
 }
 
 fun Context.showLongToast(text: CharSequence) {
@@ -30,7 +25,7 @@ fun Context.showLongToast(text: CharSequence) {
 fun setupUI(view: View, context: Context) {
     // Set up touch listener for non-text box views to hide keyboard.
     if (view !is EditText) {
-        view.setOnTouchListener { v: View?, event: MotionEvent? ->
+        view.setOnTouchListener { _: View?, _: MotionEvent? ->
             hideKeyboard(context)
             false
         }
