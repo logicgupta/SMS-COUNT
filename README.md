@@ -1,4 +1,7 @@
 # SMS-COUNT
-SMS COUNT TASK
 
-## Android application build using MVP android achitecture pattern.
+## Android application build using MVP android architecture pattern.
+
+- Mobile Number length must be always 10
+
+
